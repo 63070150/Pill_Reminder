@@ -12,9 +12,10 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator>
-      <Tab.Screen name="HomeJa" component={Home} />
-      <Tab.Screen name="CalenderJa" component={Calender}/>
+        <Tab.Screen name="HomeJa" component={Home} />
+        <Tab.Screen name="CalenderJa" component={Calender} />
       </Tab.Navigator>
+      <Text>Test</Text>
     </NavigationContainer>
   );
 }
