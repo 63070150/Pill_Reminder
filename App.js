@@ -16,6 +16,9 @@ export default function App() {
         <Tab.Screen name="CalenderJa" component={Calender} />
       </Tab.Navigator>
       <Text>Test</Text>
+      <Text>Test</Text>
+      <Text>Test</Text>
+      <Text>Test</Text>
     </NavigationContainer>
   );
 }
