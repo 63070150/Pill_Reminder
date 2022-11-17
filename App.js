@@ -5,21 +5,14 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import Home from "./component/Home";
 import Calender from './component/Calender';
-
-const Tab = createBottomTabNavigator();
+import Tabs from './navigator/MyNavigator';
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen name="HomeJa" component={Home} />
-        <Tab.Screen name="CalenderJa" component={Calender} />
-      </Tab.Navigator>
-      <Text>Test</Text>
-      <Text>Test</Text>
-      <Text>Test</Text>
-      <Text>Test</Text>
+    <Tabs></Tabs>    
     </NavigationContainer>
+    
   );
 }
 
