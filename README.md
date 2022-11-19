@@ -17,3 +17,7 @@ expo install @react-navigation/native-stack
 
 
 expo install react-native-gesture-handler react-native-reanimated
+
+
+
+expo install firebase
