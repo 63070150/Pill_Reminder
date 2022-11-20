@@ -4,6 +4,7 @@ import { View, Text, Button, StyleSheet } from "react-native";
 import { FlatList, ScrollView } from "react-native-gesture-handler";
 import db from "../database/firebaseDB";
 
+
 const MedicationsScreen = ({ navigation }) => {
   const [listData, setListData] = useState([]);
 
@@ -32,11 +33,9 @@ const MedicationsScreen = ({ navigation }) => {
   }
 
   return (
-
-      <ScrollView contentContainerStyle={{paddingBottom: "85%", paddingTop: 20, width: "100%", height: "100%", alignItems: "center"}}>
+    <ScrollView contentContainerStyle={{paddingBottom: "85%", paddingTop: 20, width: "100%", height: "100%", alignItems: "center"}}>
       {listData.map(generateMedicine)}
       </ScrollView>
-
   );
 };
 
