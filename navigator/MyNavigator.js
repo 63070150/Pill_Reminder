@@ -9,7 +9,25 @@ import RemindersSettingScreen from "../screens/RemindersSettingScreen";
 import RefillMedicineScreen from "../screens/RefillMedicineScreen";
 import { Ionicons , AntDesign, Feather } from "@expo/vector-icons";
 
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+const TopTab = createMaterialTopTabNavigator();
+
 const Bottomtab = createBottomTabNavigator();
+
+function ToptapBar (){
+  return( <TopTab.Navigator >
+    <TopTab.Screen name="Active" component={MedicationsScreen} options={{tabBarIndicatorStyle:{
+      backgroundColor:"#fc8b83",
+    }}}
+    />
+    <TopTab.Screen name="Paused" component={MedicationsScreen} options={{tabBarIndicatorStyle:{
+      backgroundColor:"#fc8b83"
+    }}}/>
+    <TopTab.Screen name="Completed" component={MedicationsScreen} options={{tabBarIndicatorStyle:{
+      backgroundColor:"#fc8b83"
+    }}}/>
+  </TopTab.Navigator>)
+}
 
 const CustomTabBarButton = ({children, onPress}) => (
     <TouchableOpacity 
@@ -55,7 +73,7 @@ const Tabs = () => {
     >
       <Bottomtab.Screen 
         name="Home"
-        component={CalendarScreen}
+        component={CalendarScreen} 
         options={{
         headerTitle: "Today's Meds",
         headerStyle: {
@@ -89,7 +107,7 @@ const Tabs = () => {
       />
       <Bottomtab.Screen
         name="Medication"
-        component={MedicationsScreen}
+        component={ToptapBar}
         options={{
         headerTitle: "Medications",
         headerStyle: {
