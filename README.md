@@ -21,3 +21,5 @@ expo install react-native-gesture-handler react-native-reanimated
 npm install firebase@9.6.11
 
 npm install @react-navigation/material-top-tabs react-native-tab-view
+
+npm install react-native-calendar-strip
