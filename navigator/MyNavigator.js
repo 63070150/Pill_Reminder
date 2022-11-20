@@ -58,6 +58,10 @@ const Tabs = () => {
         component={CalendarScreen}
         options={{
         headerTitle: "Today's Meds",
+        headerStyle: {
+          shadowOpacity: 5,
+          shadowRadius: 16.0,
+        },
           tabBarIcon: ({ focused }) => (
             <View
               style={{
@@ -88,6 +92,10 @@ const Tabs = () => {
         component={MedicationsScreen}
         options={{
         headerTitle: "Medications",
+        headerStyle: {
+          shadowOpacity: 5,
+          shadowRadius: 16.0,
+        },
           tabBarIcon: ({ focused }) => (
             <View
               style={{
@@ -117,6 +125,10 @@ const Tabs = () => {
         name="AddNewMedicine"
         component={AddNewMedicineScreen}
         options={{
+          headerStyle: {
+            shadowOpacity: 5,
+            shadowRadius: 16.0,
+          },
           tabBarIcon: ({ focused }) => (
             <Image
                 source={require("../assets/plus.png")}
@@ -137,6 +149,10 @@ const Tabs = () => {
         component={RefillMedicineScreen}
         options={{
         headerTitle: "Refill Medicine",
+        headerStyle: {
+          shadowOpacity: 5,
+          shadowRadius: 16.0,
+        },
           tabBarIcon: ({ focused }) => (
             <View
               style={{
@@ -167,6 +183,10 @@ const Tabs = () => {
         component={RemindersSettingScreen}
         options={{
             headerTitle: "Reminder Settings",
+            headerStyle: {
+              shadowOpacity: 5,
+              shadowRadius: 16.0,
+            },
           tabBarIcon: ({ focused }) => (
             <View
               style={{
