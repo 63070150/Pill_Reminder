@@ -25,3 +25,5 @@ npm install @react-navigation/material-top-tabs react-native-tab-view
 npx expo install react-native-pager-view
 
 npm install react-native-calendar-strip
+
+npm install moment
