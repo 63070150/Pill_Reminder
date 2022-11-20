@@ -5,7 +5,7 @@ import { ScrollView } from "react-native-gesture-handler";
 import db from "../database/firebaseDB";
 
 
-const MedicationsScreen = ({ navigation, route }) => {
+const MedicationsScreen2 = ({ navigation, route }) => {
   const [listData, setListData] = useState([]);
   console.log(route.name);
 
@@ -25,7 +25,7 @@ const MedicationsScreen = ({ navigation, route }) => {
   }
 
   function generateMedicine(value, index) {
-    return( value.active ? 
+    return( !value.active ?
       <View key={index} style={styles.medic}>
         <Text>{value.name}</Text>
         <Text style={{opacity: 0.4}}>{value.dosage} tabs | {value.number} times</Text>
@@ -64,4 +64,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default MedicationsScreen;
+export default MedicationsScreen2;
