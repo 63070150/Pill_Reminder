@@ -22,4 +22,6 @@ npm install firebase@9.6.11
 
 npm install @react-navigation/material-top-tabs react-native-tab-view
 
+npx expo install react-native-pager-view
+
 npm install react-native-calendar-strip
