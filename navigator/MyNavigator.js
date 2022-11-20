@@ -16,14 +16,11 @@ const Bottomtab = createBottomTabNavigator();
 
 function ToptapBar (){
   return( <TopTab.Navigator >
-    <TopTab.Screen name="Active" component={MedicationsScreen} options={{tabBarIndicatorStyle:{
+    <TopTab.Screen name="Active" component={MedicationsScreen} initialParams={{active: true}} options={{tabBarIndicatorStyle:{
       backgroundColor:"#fc8b83",
     }}}
     />
-    <TopTab.Screen name="Paused" component={MedicationsScreen} options={{tabBarIndicatorStyle:{
-      backgroundColor:"#fc8b83"
-    }}}/>
-    <TopTab.Screen name="Completed" component={MedicationsScreen} options={{tabBarIndicatorStyle:{
+    <TopTab.Screen name="Completed" component={MedicationsScreen} initialParams={{active: false}} options={{tabBarIndicatorStyle:{
       backgroundColor:"#fc8b83"
     }}}/>
   </TopTab.Navigator>)
