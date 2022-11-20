@@ -15,3 +15,7 @@ expo install @react-navigation/native-stack
 
 
 expo install react-native-gesture-handler react-native-reanimated
+
+
+
+npm install firebase@9.6.11
