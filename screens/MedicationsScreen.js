@@ -7,7 +7,7 @@ import db from "../database/firebaseDB";
 
 const MedicationsScreen = ({ navigation, route }) => {
   const [listData, setListData] = useState([]);
-  console.log(route.name);
+  console.log(route.params.active)
 
   useEffect(() => {
     const unsub = onSnapshot(collection(db, "Medicine"), getData, (error) => {
@@ -25,7 +25,14 @@ const MedicationsScreen = ({ navigation, route }) => {
   }
 
   function generateMedicine(value, index) {
-    return( value.active ? 
+
+    return( 
+      value.active && route.params.active ?
+      <View key={index} style={styles.medic}>
+        <Text>{value.name}</Text>
+        <Text style={{opacity: 0.4}}>{value.dosage} tabs | {value.number} times</Text>
+      </View> : 
+      !value.active && !route.params.active ? 
       <View key={index} style={styles.medic}>
         <Text>{value.name}</Text>
         <Text style={{opacity: 0.4}}>{value.dosage} tabs | {value.number} times</Text>
